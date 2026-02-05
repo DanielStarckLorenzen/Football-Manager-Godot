@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdw46nd87iypg"]
+
+[ext_resource type="Script" uid="uid://phxyx1oc2o8u" path="res://scripts/ui/match_ui_overlay.gd" id="1_ecc7o"]
+
+[node name="MatchUIOverlay" type="CanvasLayer"]
+script = ExtResource("1_ecc7o")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="MainContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="TopBar" type="PanelContainer" parent="Control/MarginContainer/MainContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/MainContainer/TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/MainContainer/TopBar/MarginContainer"]
+layout_mode = 2
+
+[node name="TimeLabel" type="Label" parent="Control/MarginContainer/MainContainer/TopBar/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Control/MarginContainer/MainContainer/TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScoreLabel" type="Label" parent="Control/MarginContainer/MainContainer/TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0 - 0"
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="Control/MarginContainer/MainContainer/TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TeamLabel" type="Label" parent="Control/MarginContainer/MainContainer/TopBar/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "My Club"
+horizontal_alignment = 1
+
+[node name="HalfTimeContainer" type="CenterContainer" parent="Control/MarginContainer/MainContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/MarginContainer/MainContainer/HalfTimeContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/MainContainer/HalfTimeContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HalfTimeLabel" type="Label" parent="Control/MarginContainer/MainContainer/HalfTimeContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "HALF TIME"
+horizontal_alignment = 1

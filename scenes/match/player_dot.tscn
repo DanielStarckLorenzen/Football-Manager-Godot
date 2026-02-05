@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cib5df3lrufv4"]
+
+[ext_resource type="Script" uid="uid://c1f25n2vp3k0k" path="res://scripts/match/player_dot.gd" id="1_nqluv"]
+[ext_resource type="Texture2D" uid="uid://7i8dptnypl4d" path="res://assets/Player-dot.png" id="2_rxtpm"]
+
+[node name="PlayerDot" type="Node2D"]
+script = ExtResource("1_nqluv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_rxtpm")
+
+[node name="NameLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(100, 20)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = -35.0
+offset_right = 50.0
+offset_bottom = -12.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+text = "Player"
+horizontal_alignment = 1

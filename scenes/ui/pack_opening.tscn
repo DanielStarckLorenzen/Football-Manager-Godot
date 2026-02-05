@@ -1,0 +1,101 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpqd2xh2lnqmt"]
+
+[ext_resource type="Script" uid="uid://k2pc15v6ihrv" path="res://scripts/ui/pack_opening.gd" id="1_dd4yc"]
+
+[node name="PackOpening" type="CanvasLayer"]
+script = ExtResource("1_dd4yc")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TopBar" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PackOpeningLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+text = "Pack Opening"
+
+[node name="Control" type="Control" parent="Control/MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MoneyLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+text = "Money: $0"
+
+[node name="Control2" type="Control" parent="Control/MarginContainer/VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="Control/MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+text = "Back"
+
+[node name="HSeparator" type="HSeparator" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PackDisplay" type="Control" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer/VBoxContainer/PackDisplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/PackDisplay/CenterContainer"]
+layout_mode = 2
+
+[node name="PackInfoLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/PackDisplay/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Open a pack to get 5 new players!"
+
+[node name="CardsContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer/PackDisplay/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BottomBar" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Control" type="Control" parent="Control/MarginContainer/VBoxContainer/BottomBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/BottomBar"]
+layout_mode = 2
+
+[node name="OpenPackButton" type="Button" parent="Control/MarginContainer/VBoxContainer/BottomBar/VBoxContainer"]
+layout_mode = 2
+text = "Open Pack ($100)"
+
+[node name="StatusLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/BottomBar/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="Control/MarginContainer/VBoxContainer/BottomBar"]
+layout_mode = 2
+size_flags_horizontal = 3

@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddj62rglfj5y7"]
+
+[ext_resource type="Script" uid="uid://c0i01kaqupeyv" path="res://scripts/game_container.gd" id="1_sfwqv"]
+[ext_resource type="PackedScene" uid="uid://k6mqrxoel27n" path="res://scenes/ui/main_menu.tscn" id="2_mqaqf"]
+[ext_resource type="PackedScene" uid="uid://ql20ukmeidqs" path="res://scenes/ui/squad_screen.tscn" id="3_pdfmr"]
+[ext_resource type="PackedScene" uid="uid://bpqd2xh2lnqmt" path="res://scenes/ui/pack_opening.tscn" id="4_pdfmr"]
+
+[node name="GameContainer" type="Node"]
+script = ExtResource("1_sfwqv")
+
+[node name="MainMenu" parent="." instance=ExtResource("2_mqaqf")]
+
+[node name="SquadScreen" parent="." instance=ExtResource("3_pdfmr")]
+
+[node name="PackOpening" parent="." instance=ExtResource("4_pdfmr")]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfw0hyoin5slj"]
+
+[ext_resource type="Script" uid="uid://coxhpyoaliqkn" path="res://scripts/match/match.gd" id="1_nudob"]
+[ext_resource type="Texture2D" uid="uid://dqgxv66s8vw7t" path="res://assets/Field.png" id="2_86swp"]
+[ext_resource type="Script" uid="uid://ddqvrqq74gnuy" path="res://scripts/match/match_sim.gd" id="3_o7pxg"]
+[ext_resource type="Texture2D" uid="uid://gl0am1hnu5og" path="res://assets/Ball.png" id="4_j8chj"]
+
+[node name="Match" type="Node2D"]
+script = ExtResource("1_nudob")
+
+[node name="Pitch" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -78.0
+offset_top = -25.0
+offset_right = 1074.0
+offset_bottom = 623.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.21476522, 0.47916085, 0.25115132, 1)
+
+[node name="Field" type="Sprite2D" parent="Pitch"]
+position = Vector2(579, 326)
+texture = ExtResource("2_86swp")
+
+[node name="MatchSim" type="Node" parent="."]
+script = ExtResource("3_o7pxg")
+
+[node name="Ball" type="Sprite2D" parent="."]
+z_index = 5
+scale = Vector2(3, 3)
+texture = ExtResource("4_j8chj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(500, 300)
